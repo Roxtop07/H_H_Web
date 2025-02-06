@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Hurdle 3.0 Player Auction</title>
+    <link rel="stylesheet" href="styles/auction.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+    <!-- Parallax Section -->
+    <div class="parallax">
+        <h1>Hostel Hurdle 3.0 Player Auction</h1>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Team Overview Section -->
+        <div id="team-container" class="team-overview">
+            <div class="team" id="team1">
+                <img src="styles/phoenix.jpeg" alt="Phoenix Logo" class="team-logo">
+                <h3>PHOENIX</h3>
+                <p>Points: <span id="team1-points">10000</span></p>
+                <ul id="team1-players"></ul>
+                <button class="delete-team" onclick="deleteTeam('team1')">Delete Team</button>
+            </div>
+            <div class="team" id="team2">
+                <img src="styles/RAUDRA.jpeg" alt="Rudra Logo" class="team-logo">
+                <h3>RUDRA</h3>
+                <p>Points: <span id="team2-points">10000</span></p>
+                <ul id="team2-players"></ul>
+                <button class="delete-team" onclick="deleteTeam('team2')">Delete Team</button>
+            </div>
+            <div class="team" id="team3">
+                <img src="styles/wingers.jpeg" alt="Wingers Logo" class="team-logo">
+                <h3>WINGERS</h3>
+                <p>Points: <span id="team3-points">10000</span></p>
+                <ul id="team3-players"></ul>
+                <button class="delete-team" onclick="deleteTeam('team3')">Delete Team</button>
+            </div>
+        </div>
+
+        <!-- Add Team Button -->
+        <!-- <div class="add-team-section">
+            <button class="add-button" onclick="addTeam()">Add New Team</button>
+        </div> -->
+
+        <!-- Player Cards -->
+        <div class="player-cards" id="player-cards">
+            <h2>Available Players</h2>
+            <!-- Example player cards -->
+            <div class="card" id="player1" data-price="2000">
+                <h3>Player 1</h3>
+                <p class="player-description">A dynamic football player.</p>
+                <button class="bid-button" onclick="bidPlayer('Player 1', 2000, 'player1')">Bid Player</button>
+                <button class="delete-button" onclick="deletePlayerCard('player1')">Delete</button>
+            </div>
+            <div class="card" id="player2" data-price="3000">
+                <h3>Player 2</h3>
+                <p class="player-description">A fast-paced basketball star.</p>
+                <button class="bid-button" onclick="bidPlayer('Player 2', 3000, 'player2')">Bid Player</button>
+                <button class="delete-button" onclick="deletePlayerCard('player2')">Delete</button>
+            </div>
+            <div class="card" id="player3" data-price="1500">
+                <h3>Player 3</h3>
+                <p class="player-description">An endurance expert in running.</p>
+                <button class="bid-button" onclick="bidPlayer('Player 3', 1500, 'player3')">Bid Player</button>
+                <button class="delete-button" onclick="deletePlayerCard('player3')">Delete</button>
+            </div>
+        </div>
+
+        <!-- Add New Player Button -->
+        <div class="add-player-section">
+            <button class="add-button" onclick="addPlayer()">Add New Player</button>
+        </div>
+
+        <!-- Reset Bidding Step Button -->
+        <div class="reset-bidding-section">
+            <button onclick="resetBidding()">Reset Last Step</button>
+        </div>
+
+        <!-- Scroll to Top Button -->
+        <button id="scroll-top-btn" onclick="scrollToTop()">&#x1F51D</button>
+
+        <div id="message" class="message"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Hostel Hurdle 3.0</p>
+    </footer>
+
+    <script src="auction.js"></script>
+</body>
+</html>

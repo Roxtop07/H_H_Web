@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Hostel Huddle</title>
+    <link rel="stylesheet" href="styles/admin.css">
+    <script src="scripts/admin.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Admin Panel</h1>
+    </header>
+    <main>
+        <section id="manage-auction">
+            <h2>Manage Auction</h2>
+            <button id="close-auction">Close Auction</button>
+        </section>
+
+        <section id="update-points">
+            <h2>Update Points</h2>
+            <form id="update-form">
+                <label for="team">Team</label>
+                <select id="team">
+                    <!-- Team options will be populated here -->
+                </select>
+                <label for="points">Points</label>
+                <input type="number" id="points" required>
+                <button type="submit">Update Points</button>
+            </form>
+        </section>
+
+        <section id="export-csv">
+            <h2>Export Data</h2>
+            <button id="export-teams">Export Teams</button>
+            <button id="export-players">Export Players</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Hostel Huddle | Jagran Lakecity University</p>
+    </footer>
+</body>
+</html>

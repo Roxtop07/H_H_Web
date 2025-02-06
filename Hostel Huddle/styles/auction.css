@@ -1,0 +1,274 @@
+/* auction.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: white;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: #ffff00;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Parallax Section */
+.parallax {
+    background-image: url('1.jpg');
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+.parallax h1 {
+    font-size: 4rem;
+    animation: fadeIn 3s ease-in-out, neon-glow 1.5s infinite 
+}
+
+@keyframes neon-glow {
+    from {
+        text-shadow: 
+        0 0 7px rgb(255, 68, 68), 
+        0 0 7px rgb(255, 68, 68), 
+        0 0 7px rgb(184, 0, 0), 
+        0 0 7px rgb(255, 0, 0), 
+        0 0 7px rgb(255, 68, 68), 
+        0 0 7px rgb(255, 68, 68), 
+        0 0 7px rgb(255, 68, 68);
+    }
+    to {
+        text-shadow: 
+        0 0 7px rgb(255, 68, 68), 
+        0 0 7px rgb(255, 68, 68), 
+        0 0 7px rgb(184, 0, 0), 
+        0 0 7px rgb(255, 0, 0), 
+        0 0 7px rgb(255, 68, 68), 
+        0 0 7px rgb(255, 68, 68), 
+        0 0 7px rgb(255, 68, 68);
+    }
+}
+
+/* Team Overview */
+.team-overview {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.team {
+    background-color: #282828;
+    padding: 20px;
+    border-radius: 15px;
+    width: 45%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.team-logo {
+    width: 80px;  /* Adjust size as needed */
+    height: 80px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 10px; /* Centers logo */
+    border-radius: 50%;
+    background-color: white; /* Adds contrast */
+    padding: 5px;
+}
+
+.team h3 {
+    color: #FFD700;
+}
+
+#team1-players, #team2-players, #team3-points {
+    list-style-type: none;
+    padding: 0;
+}
+
+#team1-points, #team2-points, #team3-points{
+    color: #28a745;
+    font-weight: bold;
+}
+
+.delete-team {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: transform 0.2s;
+}
+
+.delete-team:hover {
+    transform: scale(1.1);
+}
+
+/* Player Cards */
+.card {
+    background-color: #1E1E1E;
+    border-radius: 15px;
+    padding: 35px;
+    margin: 35px;
+    width: 290px;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+    opacity: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.card:hover{
+    box-shadow: 0 4px 12px rgb(61, 240, 6);
+    transition: 0.3s;
+    transform: scale(1.1);
+    animation: none;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin-top: 15px;
+    color: #FFD700;
+}
+
+.card p {
+    color: #d3d3d3;
+    font-size: 14px;
+}
+
+.bid-button, .delete-button {
+    background-color: #28a745;
+    padding: 12px 25px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: transform 0.2s;
+}
+
+.delete-button {
+    background-color: #dc3545;
+}
+
+.bid-button:hover, .delete-button:hover {
+    transform: scale(1.1);
+    animation: bounce 1s infinite;
+}
+
+/* Add New Player Button */
+.add-player-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.add-button {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.add-button:hover {
+    transform: scale(1.1);
+    animation: bounce 1s infinite;
+}
+
+/* Add Team Button */
+.add-team-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.add-button {
+    background-color: #17a2b8;
+}
+
+/* Reset Bidding Button */
+.reset-bidding-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.reset-bidding-section button {
+    background-color: #f39c12;
+    padding: 12px 30px;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.reset-bidding-section button:hover {
+    transform: scale(1.1);
+}
+
+/* Scroll to Top Button */
+
+#scroll-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffe5ad;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+#scroll-top-btn:hover {
+    transform: scale(1.2);
+    background-color: #ffea00;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    margin-top: 40px;
+}
