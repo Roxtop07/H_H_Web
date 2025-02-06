@@ -18,7 +18,7 @@ With live bidding, dynamic ranking, and an interactive experience, this system e
 
 ## 🏗️ Tech Stack
 
-🔹 **Frontend:** Next.js, Tailwind CSS  
+🔹 **Frontend:** HTML, Tailwind CSS  
 🔹 **Backend:** Node.js, Express *(if required)*  
 🔹 **Database:** MongoDB *(for persistent data storage, if needed)*  
 🔹 **Live Updates:** WebSockets *(for seamless real-time interactions)*  
